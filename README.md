@@ -6,7 +6,7 @@ REMINDER: This module does NOT fully reconstruct some data-types, I plan to add 
 ### ReconstructorOptions
 `IsClient` `boolean`
 
-### Reconstruct.new(ReconstructorOptions: `ReconstructorOptions`): `Reconstructor`
+### Reconstruct.new(ReconstructorOptions: [ReconstructorOptions](#reconstructoroptions)): #reconstructor:reconstruct(...: any):string
 Returns a `Reconstructor` object
 
 ### Reconstructor:Reconstruct(...: any): string
