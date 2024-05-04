@@ -6,8 +6,10 @@ A fast, usable module for reconstructing data-types ( see supported data-types [
 > To add your own, follow [this](./AYO.md) guide.
 
 ### ReconstructorOptions
-`IsClient` `boolean`
-
+|Option|Value|Information|
+|-------------|-------------|-------------|
+|IsClient|boolean[^1]?|Changes the behavior of how `Instance`'s are found by using `Instance:WaitForChild()` instead of directly indexing the `Instance`
+|||
 ### Reconstruct.new(ReconstructorOptions: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
 Returns a `Reconstructor` object
 
@@ -40,3 +42,4 @@ local output = {
 }
 --]]
 ```
+[^1]: true or false
