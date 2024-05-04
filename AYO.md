@@ -1,8 +1,8 @@
+## Add Your Own Data-Type
+
 This is a guide to add/edit data-types.
 > [!NOTE]
 > The most used data-types are already supported but if you still need to add one, use this as a guide
-
-## Add Your Own Data-Type
 
 ### Step 1
 Create a `ModuleScript`[^1] parented under the `types` folder
