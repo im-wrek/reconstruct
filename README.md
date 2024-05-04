@@ -1,12 +1,9 @@
 ## Reconstruct
 A fast, usable module for reconstructing data-types ( see supported data-types [here](./types) )
-
-https://create.roblox.com/store/asset/17385700566
-
 > [!NOTE]
 > This module does NOT fully reconstruct some data-types, I plan to add support for most or if not all data-types.
 >
-> To add your own, follow [this](./AYO.md) guide.
+> To add your own (or modify existing data-types), follow [this](./AYO.md) guide.
 
 ### ReconstructorOptions
 |Option|Value|Default|Information|
@@ -49,5 +46,10 @@ local output = {
 }
 --]]
 ```
+
+### Installation
+Get the model on the [Creator Store](https://create.roblox.com/store/asset/17385700566)
+OR
+Download the .rbxm file [here](https://github.com/im-wrek/reconstruct/raw/main/Reconstruct.rbxm)
 [^1]: true or false
 [^2]: anything with double-quotes, single-quotes or backticks, see [strings](https://create.roblox.com/docs/luau/strings)
