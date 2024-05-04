@@ -1,5 +1,5 @@
 ## Reconstruct
-A fast, usable module for reconstructing data-types ( see supported data-types [here](./types) )
+A fast, usable module for reconstructing (decompiling) data-types ( see supported data-types [here](./types) )
 
 ### Reconstruct.new(`ReconstructorOptions`: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
 Returns a `Reconstructor` object
