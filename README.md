@@ -5,19 +5,19 @@ A fast, usable module for reconstructing data-types ( see supported data-types [
 >
 > To add your own (or modify existing data-types), follow [this](./AYO.md) guide.
 
-### Reconstruct.new(ReconstructorOptions: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
+### Reconstruct.new(`ReconstructorOptions`: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
 Returns a `Reconstructor` object
 
 ### ReconstructorOptions
-|Option|Value|Default|Information|
-|-------------|-------------|-------------|-------------|
-|IsClient|boolean[^1]?|true|Changes the behavior of how `Instance`'s are found by using `Instance:WaitForChild()` instead of directly indexing the `Instance`
-|AppendVariable|boolean[^1]?|false|Decides whether `local output` is appended to the output or not
-|VariableNames|string[^2]?|%type_|Formats reconstructed data-types variable names. To use this, you need to include "%type" in your value.
-|WrapKeysInBrackets|boolean[^1]?|true|Decides whether numbered keys in tables are wrapped in brackets `[]` or not
-|ReconstructInstances|boolean[^1]?|true|Decides whether data-types that use `Instance`s ( such as [CatalogSearchParams](./types/CatalogSearchParams.lua) ) will be reconstructed or not
+  |Option|Value|Default|Information|
+  |-------------|-------------|-------------|-------------|
+  |IsClient|boolean[^1]?|true|Changes the behavior of how `Instance`'s are found by using `Instance:WaitForChild()` instead of directly indexing the `Instance`
+  |AppendVariable|boolean[^1]?|false|Decides whether `local output` is appended to the output or not
+  |VariableNames|string[^2]?|%type_|Formats reconstructed data-types variable names. To use this, you need to include "%type" in your value.
+  |WrapKeysInBrackets|boolean[^1]?|true|Decides whether numbered keys in tables are wrapped in brackets `[]` or not
+  |ReconstructInstances|boolean[^1]?|true|Decides whether data-types that use `Instance`s ( such as [CatalogSearchParams](./types/CatalogSearchParams.lua) ) will be reconstructed or not
 
-### Reconstructor:Reconstruct(...: any): string
+### Reconstructor:Reconstruct(`...: any`): `string`
 Reconstructs data-types into a useable, readable format
 
 Example
