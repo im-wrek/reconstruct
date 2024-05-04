@@ -1,16 +1,16 @@
 ## Reconstruct
-A fast, usable module for reconstructing data-types ( see supported data-types [here]() )
-
-REMINDER: This module does NOT fully reconstruct some data-types, I plan to add support for most or if not all data types. You can add your own also and if you have suggestions shoot me a dm (im.wrek on Discord)
+A fast, usable module for reconstructing data-types ( see supported data-types [here](./types) )
+> [!NOTE]
+> This module does NOT fully reconstruct some data-types, I plan to add support for most or if not all data-types. To add your own, see (this)[./AYO]
 
 ### ReconstructorOptions
 `IsClient` `boolean`
 
-### Reconstruct.new(ReconstructorOptions: [ReconstructorOptions](#reconstructoroptions)): #reconstructor:reconstruct(...: any):string
+### Reconstruct.new(ReconstructorOptions: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
 Returns a `Reconstructor` object
 
 ### Reconstructor:Reconstruct(...: any): string
-Reconstructs objects
+Reconstructs data-types into a useable, readable format
 
 Example
 ```lua
