@@ -22,14 +22,11 @@ local module = {}
 module.__index = module
 
 export type ReconstructorOptions = {
-	IsClient: boolean?, -- default, false
-	AppendVariable: boolean?, -- default, true
-	VariableNames: string?, -- ONLY CHANGES CERTAIN TYPES
-	-- default, "%type_", to format it differently, just include "%type" in your final string. 
-	WrapKeysInBrackets: boolean?, -- default, true
-	-- when false, tables wont have their key values with brackets
-	ReconstructInstances: boolean? -- default, true
-	-- this decides whether "Instances" such as "CatalogSearchParams" or "RaycastParams" will be reconstructed or not
+	IsClient: boolean?,
+	AppendVariable: boolean?,
+	VariableNames: string?,
+	WrapKeysInBrackets: boolean?,
+	ReconstructInstances: boolean?
 }
 
 function module.new(options: ReconstructorOptions?): Reconstructor
