@@ -50,3 +50,4 @@ local output = {
 --]]
 ```
 [^1]: true or false
+[^2]: anything with double-quotes, single-quotes or backticks, see [strings](https://create.roblox.com/docs/luau/strings)
