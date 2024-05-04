@@ -1,15 +1,22 @@
 ## Reconstruct
 A fast, usable module for reconstructing data-types ( see supported data-types [here](./types) )
+
+https://create.roblox.com/store/asset/17385700566
+
 > [!NOTE]
 > This module does NOT fully reconstruct some data-types, I plan to add support for most or if not all data-types.
 >
 > To add your own, follow [this](./AYO.md) guide.
 
 ### ReconstructorOptions
-|Option|Value|Information|
-|-------------|-------------|-------------|
-|IsClient|boolean[^1]?|Changes the behavior of how `Instance`'s are found by using `Instance:WaitForChild()` instead of directly indexing the `Instance`
-|||
+|Option|Value|Default|Information|
+|-------------|-------------|-------------|-------------|
+|IsClient|boolean[^1]?|true|Changes the behavior of how `Instance`'s are found by using `Instance:WaitForChild()` instead of directly indexing the `Instance`
+|AppendVariable|boolean[^1]?|false|Decides whether `local output` is appended to the output or not
+|VariableNames|string[^2]?|%type_|Formats reconstructed data-types variable names. To use this, you need to include "%type" in your value.
+|WrapKeysInBrackets|boolean[^1]?|true|Decides whether numbered keys in tables are wrapped in brackets `[]` or not
+|ReconstructInstances|boolean[^1]?|true|Decides whether data-types that use `Instance`s ( such as [CatalogSearchParams](./types/CatalogSearchParams.lua) ) will be reconstructed or not
+
 ### Reconstruct.new(ReconstructorOptions: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
 Returns a `Reconstructor` object
 
