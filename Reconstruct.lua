@@ -6,27 +6,8 @@ Information
 	Version : V.0.1
 	Author : 3F1VE
 	Description : Reconstructs data-types into a readable, useable format.
-	Date : April 27th, 2024
+	Date : May 4th, 2024
 	Liscensing : distribute this however you want, i dont care
-Documentation
-	local module = require(path.to.module)
-
-	local options = {
-		IsClient = false, -- this only changes WaitForChild when Instances in tables are reconstructed.
-		AppendVariable = true -- decides whether "local output = " is appended or not
-	}
-
-	local Reconstructor = module.new(options)
-
-	local Reconstruct = Reconstructor:Reconstruct({["User"] = {AccountAge = 14, Gold = 5, Location = Vector3.new(1, 1, 1), Spawn = game.Workspace.SpawnLocation}})
-
-	print(Reconstruct) -- outputs "local output = {
-		["User"] = {
-			["Location"] = Vector3.new(1, 1, 1),
-			["Spawn"] = workspace.SpawnLocation,
-			["Gold"] = 5,
-			["AccountAge"] = 14,
-		},"
 Use Cases
 	This would be best to convert tables to actual code (e.g if you want to get data from an external website and save it instead of using GetAsync() each time)
 	
@@ -45,8 +26,10 @@ export type ReconstructorOptions = {
 	AppendVariable: boolean?, -- default, true
 	VariableNames: string?, -- ONLY CHANGES CERTAIN TYPES
 	-- default, "%type_", to format it differently, just include "%type" in your final string. 
-	WrapKeysInBrackets: boolean? -- default, true
+	WrapKeysInBrackets: boolean?, -- default, true
 	-- when false, tables wont have their key values with brackets
+	ReconstructInstances: boolean? -- default, true
+	-- this decides whether "Instances" such as "CatalogSearchParams" or "RaycastParams" will be reconstructed or not
 }
 
 function module.new(options: ReconstructorOptions?): Reconstructor
@@ -66,13 +49,17 @@ function module.Reconstruct(self: Reconstructor | {[string]: boolean?}, ...: any
 	for index, val in t do
 		local Type = typeof(val)
 		local type_ = require(types:FindFirstChild(Type) or any)
-		if types:FindFirstChild(Type) and types:FindFirstChild(Type):GetAttribute("VariableRequired") then
-			local var, source = type_(options, val)
-			insert(output, source)
-		else
-			local source = type_(options, val)
-			insert(output, source)
+		
+		local source, vars = type_(options, val)
+
+		if vars then
+			for index, var in vars do
+				source = var .. "\n" .. source
+			end
+			source = "\n" .. source
 		end
+		
+		insert(output, source)
 	end
 
 	return unpack(output)
