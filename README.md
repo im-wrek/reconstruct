@@ -5,6 +5,9 @@ A fast, usable module for reconstructing data-types ( see supported data-types [
 >
 > To add your own (or modify existing data-types), follow [this](./AYO.md) guide.
 
+### Reconstruct.new(ReconstructorOptions: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
+Returns a `Reconstructor` object
+
 ### ReconstructorOptions
 |Option|Value|Default|Information|
 |-------------|-------------|-------------|-------------|
@@ -13,9 +16,6 @@ A fast, usable module for reconstructing data-types ( see supported data-types [
 |VariableNames|string[^2]?|%type_|Formats reconstructed data-types variable names. To use this, you need to include "%type" in your value.
 |WrapKeysInBrackets|boolean[^1]?|true|Decides whether numbered keys in tables are wrapped in brackets `[]` or not
 |ReconstructInstances|boolean[^1]?|true|Decides whether data-types that use `Instance`s ( such as [CatalogSearchParams](./types/CatalogSearchParams.lua) ) will be reconstructed or not
-
-### Reconstruct.new(ReconstructorOptions: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
-Returns a `Reconstructor` object
 
 ### Reconstructor:Reconstruct(...: any): string
 Reconstructs data-types into a useable, readable format
