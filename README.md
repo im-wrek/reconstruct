@@ -1,7 +1,9 @@
 ## Reconstruct
 A fast, usable module for reconstructing data-types ( see supported data-types [here](./types) )
 > [!NOTE]
-> This module does NOT fully reconstruct some data-types, I plan to add support for most or if not all data-types. To add your own, see (this)[./AYO]
+> This module does NOT fully reconstruct some data-types, I plan to add support for most or if not all data-types.
+>
+> To add your own, follow [this](./AYO.md) guide.
 
 ### ReconstructorOptions
 `IsClient` `boolean`
