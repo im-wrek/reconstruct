@@ -47,15 +47,20 @@ function module.Reconstruct(self: Reconstructor | {[string]: boolean?}, ...: any
 		local Type = typeof(val)
 		local type_ = require(types:FindFirstChild(Type) or any)
 		
-		local source, vars = type_(options, val)
-
-		if vars then
-			for index, var in vars do
-				source = var .. "\n" .. source
-			end
-			source = "\n" .. source
-		end
 		
+		local a, b = type_(options, val)
+		local source = a
+		if b then
+			if typeof(b) == "table" then
+				for index, var in b do
+					source = var .. "\n" .. source
+				end
+				source = "\n" .. source
+			else
+				source = b
+			end
+		end
+
 		insert(output, source)
 	end
 
