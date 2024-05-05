@@ -25,7 +25,7 @@ end
 ```
 
 ### Step 4
-Edit the code as needed, if you need further guidance, bump this post
+Edit the code as needed, if you need further guidance, reply to [this](https://devforum.roblox.com/t/reconstruct-a-module-that-recreates-data-types/2957286) post
 
 ----
 ## Additional Information
