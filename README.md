@@ -21,7 +21,7 @@ Returns a `Reconstructor` object
 
 
 ## Properties
-### `Reconstructor.Options`: [ReconstructorOptions](https://github.com/im-wrek/reconstruct/edit/main/README.md#reconstructoroptions)
+### `Reconstructor.Options`: [ReconstructorOptions](#reconstructoroptions)
 ----
 ## Methods
 
