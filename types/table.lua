@@ -47,9 +47,7 @@ end
 
 local any = require(types.any)
 
-local appendVars = {}
-
-function formatTableValue(options, a: any, isKey: boolean?, recursed: number?): string
+function formatTableValue(options, a: any, isKey: boolean?, recursed: number?, appendVars: {}?): string
 	local Type = typeof(a)
 	local module = types:FindFirstChild(Type)
 
@@ -74,7 +72,8 @@ function formatTableValue(options, a: any, isKey: boolean?, recursed: number?): 
 	end
 end
 
-function Table(options, a: {any}, excludeLocal: boolean?, recursed: number?): string
+function Table(options, a: {any}, excludeLocal: boolean?, recursed: number?, appendVars: {}?): string
+	local appendVars = appendVars or {}
 	local source = not (excludeLocal or (not (options['AppendVariable']) or false)) and "local output = {" or "{"
 
 	local recursed = recursed or 1
@@ -84,7 +83,7 @@ function Table(options, a: {any}, excludeLocal: boolean?, recursed: number?): st
 	
 	for key, value in a do
 		hasKeys = true
-		value = formatTableValue(options, value, false, recursed + 2)
+		value = formatTableValue(options, value, false, recursed + 2, appendVars)
 		
 		if (options['WrapKeysInBrackets'] == nil and true or options['WrapKeysInBrackets']) then
 			key = formatTableValue(options, key, true, recursed + 2) .. " = "
@@ -100,6 +99,7 @@ function Table(options, a: {any}, excludeLocal: boolean?, recursed: number?): st
 	end
 
 	source ..= `{hasKeys and '\n' or ''}{indent_}}`
+	
 	return source, (hasKeys and appendVars)
 end
 
