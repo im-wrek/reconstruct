@@ -1,10 +1,13 @@
 ## Reconstruct
+
 A fast, usable module for reconstructing (decompiling) data-types ( see supported data-types [here](./types) )
 
 ### Reconstruct.new(`ReconstructorOptions`: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
+
 Returns a `Reconstructor` object
 
 ### ReconstructorOptions
+
   |Option|Value|Default|Information|
   |-------------|-------------|-------------|-------------|
   |IsClient|boolean[^1]|true|Changes the behavior of how `Instance`'s are found by using `Instance:WaitForChild()` instead of directly indexing the `Instance`
@@ -44,6 +47,7 @@ local output = {
 ```
 
 ### Installation
+
 Get the model on the [Creator Store](https://create.roblox.com/store/asset/17385700566)
 OR
 Download the .rbxm file [here](https://github.com/im-wrek/reconstruct/raw/main/Reconstruct.rbxm)
