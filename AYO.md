@@ -1,9 +1,9 @@
-## Add Your Own Data-Type
+### Add Your Own Data-Type
 
 This is a guide to add/edit data-types.
 > [!NOTE]
 > The most used data-types are already supported but if you still need to add one, use this as a guide
-
+## Steps
 ### Step 1
 Create a `ModuleScript`[^1] parented under the `types` folder
 
@@ -24,7 +24,11 @@ return function(options: {}, a: Color3, excludeLocal: boolean): string
 end
 ```
 
-### Additional Information
+### Step 4
+Edit the code as needed, if you need further guidance, bump this post
+
+----
+## Additional Information
 If the data-type uses `.new()` (e.g. `CatalogSearchParams.new()`), add an attribute named "VariableRequired" and set it to `true`
 
 
