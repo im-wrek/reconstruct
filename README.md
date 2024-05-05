@@ -3,7 +3,7 @@ A fast, usable module for reconstructing (decompiling) data-types ( see supporte
 
 # Documentation
 ## Creation
-### Reconstruct.new(`ReconstructorOptions`: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
+### Reconstruct.new(`ReconstructorOptions`: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](##Methods)
 
 Returns a `Reconstructor` object
 
