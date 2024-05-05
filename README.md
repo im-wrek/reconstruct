@@ -55,11 +55,9 @@ local output = {
 --]]
 ```
 ----
-### Installation
-
-Get the model on the [Creator Store](https://create.roblox.com/store/asset/17385700566)
-OR
-Download the .rbxm file [here](https://github.com/im-wrek/reconstruct/raw/main/Reconstruct.rbxm)
+## Installation
+### [Creator Store](https://create.roblox.com/store/asset/17385700566)
+### [rbxm file](https://github.com/im-wrek/reconstruct/raw/main/Reconstruct.rbxm)
 ----
 
 > [!NOTE]
