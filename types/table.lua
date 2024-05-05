@@ -72,6 +72,8 @@ function formatTableValue(options, a: any, isKey: boolean?, recursed: number?, a
 	end
 end
 
+local previous = {}
+
 function Table(options, a: {any}, excludeLocal: boolean?, recursed: number?, appendVars: {}?): string
 	local appendVars = appendVars or {}
 	local source = not (excludeLocal or (not (options['AppendVariable']) or false)) and "local output = {" or "{"
@@ -96,6 +98,20 @@ function Table(options, a: {any}, excludeLocal: boolean?, recursed: number?, app
 		end
 		
 		source ..= "\n" .. indent .. key .. value .. `,`
+	end
+
+	insert(previous, appendVars)
+	
+	local appendVars = {}
+	
+	if hasKeys then
+		for _, vars in previous do
+			if #vars > 0 then
+				for _, vars in vars do
+					insert(appendVars, vars)
+				end
+			end
+		end
 	end
 
 	source ..= `{hasKeys and '\n' or ''}{indent_}}`
