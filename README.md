@@ -1,20 +1,29 @@
-## Reconstruct
-
+# Reconstruct
 A fast, usable module for reconstructing (decompiling) data-types ( see supported data-types [here](./types) )
 
+# Documentation
+## Creation
 ### Reconstruct.new(`ReconstructorOptions`: [ReconstructorOptions](#reconstructoroptions)): [Reconstructor](#reconstructorreconstruct-any-string)
 
 Returns a `Reconstructor` object
+
+----
 
 ### ReconstructorOptions
 
   |Option|Value|Default|Information|
   |-------------|-------------|-------------|-------------|
-  |IsClient|boolean[^1]|true|Changes the behavior of how `Instance`'s are found by using `Instance:WaitForChild()` instead of directly indexing the `Instance`
-  |AppendVariable|boolean[^1]|false|Decides whether `local output` is appended to the output or not
-  |VariableNames|string[^2]|%type_|Formats reconstructed data-types variable names. To use this, you need to include "%type" in your value.
-  |WrapKeysInBrackets|boolean[^1]|true|Decides whether numbered keys in tables are wrapped in brackets `[]` or not
-  |ReconstructInstances|boolean[^1]|true|Decides whether data-types that use `Instance`s ( such as [CatalogSearchParams](./types/CatalogSearchParams.lua) ) will be reconstructed or not
+  |IsClient|boolean[^1]|true|Changes the behavior of how Instances are found by using `Instance:WaitForChild()` instead of directly indexing the Instance|
+  |AppendVariable|boolean[^1]|false|Decides whether `local output` is appended to the output or not|
+  |VariableNames|string[^2]|%type_|Formats reconstructed data-types variable names. To use this, you need to include "%type" in your value.|
+  |WrapKeysInBrackets|boolean[^1]|true|Decides whether numbered keys in tables are wrapped in brackets `[]` or not|
+  |ReconstructInstances|boolean[^1]|true|Decides whether data-types that use `Instance`s (such as [CatalogSearchParams](./types/CatalogSearchParams.lua)) will be reconstructed or not|
+
+
+## Properties
+### `Reconstructor.Options`: [ReconstructorOptions](https://github.com/im-wrek/reconstruct/edit/main/README.md#reconstructoroptions)
+----
+## Methods
 
 ### Reconstructor:Reconstruct(`...: any`): `string`
 Reconstructs data-types into a useable, readable format
@@ -45,13 +54,13 @@ local output = {
 }
 --]]
 ```
-
+----
 ### Installation
 
 Get the model on the [Creator Store](https://create.roblox.com/store/asset/17385700566)
 OR
 Download the .rbxm file [here](https://github.com/im-wrek/reconstruct/raw/main/Reconstruct.rbxm)
-
+----
 
 > [!NOTE]
 > This module does NOT fully reconstruct some data-types, I plan to add support for most or if not all data-types.
