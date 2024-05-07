@@ -1,5 +1,6 @@
 # Reconstruct
 A fast, usable module for reconstructing (decompiling) data-types ( see supported data-types [here](./types) )
+Works similarly to [print](https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#print)
 
 # Documentation
 ## Creation
