@@ -14,7 +14,7 @@ Returns a `Reconstructor` object
 
   |Option|Value|Default|Information|
   |-------------|-------------|-------------|-------------|
-  |IsClient|boolean[^1]|true|Changes the behavior of how Instances are found by using `Instance:WaitForChild()` instead of directly indexing the Instance|
+  |IsClient|boolean[^1]|true|Changes the behavior of how Instances are referenced by using `Instance:WaitForChild()` instead of directly indexing the Instance|
   |AppendVariable|boolean[^1]|false|Decides whether `local output` is appended to the output or not|
   |VariableNames|string[^2]|%type_|Formats reconstructed data-types variable names. To use this, you need to include "%type" in your value.|
   |WrapKeysInBrackets|boolean[^1]|true|Decides whether numbered keys in tables are wrapped in brackets `[]` or not|
