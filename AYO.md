@@ -15,7 +15,7 @@ Name the new `ModuleScript` whatever type you want it to be (e.g, `Color3`[^2], 
 ![Animation](https://github.com/im-wrek/reconstruct/assets/87952649/ed430b25-9522-45bb-966c-b9035dcda1dd)
 
 ### Step 3
-Paste  this code into the `ModuleScript` to use as a template :
+Paste this code into the `ModuleScript` to use as a template :
 ```lua
 return function(options: {}, a: Color3, excludeLocal: boolean): string
 	local source = not (excludeLocal or (not (options['AppendVariable']) or false)) and `local output = Color3.new(` or `Color3.new(`
@@ -29,7 +29,7 @@ Edit the code as needed, if you need further guidance, reply to [this](https://d
 
 ----
 ## Additional Information
-If the data-type uses `.new()` (e.g. `CatalogSearchParams.new()`), add an attribute named "VariableRequired" and set it to `true`
+If the data-type uses `.new()` (e.g. `CatalogSearchParams.new()`), add a boolean attribute named "AppendVariable" and set it to `true`
 
 
 ![Animation2](https://github.com/im-wrek/reconstruct/assets/87952649/52caa51a-635b-4573-a7fd-d8e742afbeb9)
